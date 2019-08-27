@@ -2,8 +2,10 @@
 read upup
 
 # 前端
+
 ## 配置
-- [ ] [深入浅出 Webpack](http://webpack.wuhaolin.cn/)
+~~- [ ] [深入浅出 Webpack](http://webpack.wuhaolin.cn/)~~(教程较旧)
+- [ ] [Webpack 指南](https://www.webpackjs.com/guides/getting-started/)
 
 ## 性能
 - [x] [实战篇 - 如何实现和淘宝移动端一样的模块化加载 （task-silce）](https://juejin.im/post/5d33fd0f5188256e820c80d4)
