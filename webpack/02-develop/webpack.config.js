@@ -6,8 +6,14 @@ module.exports = {
   mode: 'development',
   entry: {
     app: './src/index.js',
+    print: './src/print.js'
   },
   devtool: 'inline-source-map',
+  devServer: {
+    contentBase: path.join(__dirname, 'dist'),
+    compress: true,
+    port: 9000,
+  },
   plugins: [
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
@@ -31,7 +37,13 @@ module.exports = {
       {
         test: /\.(png|svg|jpg|gif)$/,
         use: [
-          'file-loader'
+          {
+            loader: 'url-loader', //是指定使用的loader和loader的配置参数
+            options: {
+              limit: 500,  //是把小于500B的文件打成Base64的格式，写入JS
+              name: 'images/[name]_[hash:7].[ext]',
+            }
+          }
         ]
       },
     ]

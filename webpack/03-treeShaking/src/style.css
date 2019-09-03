@@ -1,0 +1,6 @@
+.hello {
+  height: 500px;
+  color: red;
+  background: url('../asset/icon.png');
+  background-size: contain;
+}
